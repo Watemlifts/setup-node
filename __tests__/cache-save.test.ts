@@ -111,8 +111,8 @@ describe('run', () => {
         key === State.CachePrimaryKey || key === State.CacheMatchedKey
           ? yarnFileHash
           : key === State.CachePaths
-          ? '["/foo/bar"]'
-          : 'not expected'
+            ? '["/foo/bar"]'
+            : 'not expected'
       );
 
       await run();
@@ -133,8 +133,8 @@ describe('run', () => {
         key === State.CachePrimaryKey || key === State.CacheMatchedKey
           ? yarnFileHash
           : key === State.CachePaths
-          ? '["/foo/bar"]'
-          : 'not expected'
+            ? '["/foo/bar"]'
+            : 'not expected'
       );
 
       await run();
@@ -155,8 +155,8 @@ describe('run', () => {
         key === State.CachePrimaryKey || key === State.CacheMatchedKey
           ? yarnFileHash
           : key === State.CachePaths
-          ? '["/foo/bar"]'
-          : 'not expected'
+            ? '["/foo/bar"]'
+            : 'not expected'
       );
       getCommandOutputSpy.mockImplementationOnce(() => `${commonPath}/npm`);
 
@@ -175,8 +175,8 @@ describe('run', () => {
         key === State.CachePrimaryKey || key === State.CacheMatchedKey
           ? yarnFileHash
           : key === State.CachePaths
-          ? '["/foo/bar"]'
-          : 'not expected'
+            ? '["/foo/bar"]'
+            : 'not expected'
       );
 
       await run();
@@ -196,10 +196,10 @@ describe('run', () => {
         key === State.CacheMatchedKey
           ? yarnFileHash
           : key === State.CachePrimaryKey
-          ? npmFileHash
-          : key === State.CachePaths
-          ? '["/foo/bar"]'
-          : 'not expected'
+            ? npmFileHash
+            : key === State.CachePaths
+              ? '["/foo/bar"]'
+              : 'not expected'
       );
 
       await run();
@@ -224,10 +224,10 @@ describe('run', () => {
         key === State.CacheMatchedKey
           ? yarnFileHash
           : key === State.CachePrimaryKey
-          ? npmFileHash
-          : key === State.CachePaths
-          ? '["/foo/bar"]'
-          : 'not expected'
+            ? npmFileHash
+            : key === State.CachePaths
+              ? '["/foo/bar"]'
+              : 'not expected'
       );
 
       await run();
@@ -252,10 +252,10 @@ describe('run', () => {
         key === State.CacheMatchedKey
           ? npmFileHash
           : key === State.CachePrimaryKey
-          ? yarnFileHash
-          : key === State.CachePaths
-          ? '["/foo/bar"]'
-          : 'not expected'
+            ? yarnFileHash
+            : key === State.CachePaths
+              ? '["/foo/bar"]'
+              : 'not expected'
       );
 
       await run();
@@ -280,10 +280,10 @@ describe('run', () => {
         key === State.CacheMatchedKey
           ? pnpmFileHash
           : key === State.CachePrimaryKey
-          ? npmFileHash
-          : key === State.CachePaths
-          ? '["/foo/bar"]'
-          : 'not expected'
+            ? npmFileHash
+            : key === State.CachePaths
+              ? '["/foo/bar"]'
+              : 'not expected'
       );
 
       await run();
@@ -308,10 +308,10 @@ describe('run', () => {
         key === State.CacheMatchedKey
           ? npmFileHash
           : key === State.CachePrimaryKey
-          ? yarnFileHash
-          : key === State.CachePaths
-          ? '["/foo/bar"]'
-          : 'not expected'
+            ? yarnFileHash
+            : key === State.CachePaths
+              ? '["/foo/bar"]'
+              : 'not expected'
       );
       saveCacheSpy.mockImplementation(() => {
         return -1;
@@ -339,10 +339,10 @@ describe('run', () => {
         key === State.CacheMatchedKey
           ? npmFileHash
           : key === State.CachePrimaryKey
-          ? yarnFileHash
-          : key === State.CachePaths
-          ? '["/foo/bar"]'
-          : 'not expected'
+            ? yarnFileHash
+            : key === State.CachePaths
+              ? '["/foo/bar"]'
+              : 'not expected'
       );
       saveCacheSpy.mockImplementation(() => {
         throw new cache.ValidationError('Validation failed');

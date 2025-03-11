@@ -147,9 +147,8 @@ const getCacheDirectoriesFromCacheDependencyPath = async (
   packageManagerInfo: PackageManagerInfo,
   cacheDependencyPath: string
 ): Promise<string[]> => {
-  const projectDirectories = await getProjectDirectoriesFromCacheDependencyPath(
-    cacheDependencyPath
-  );
+  const projectDirectories =
+    await getProjectDirectoriesFromCacheDependencyPath(cacheDependencyPath);
   const cacheFoldersPaths = await Promise.all(
     projectDirectories.map(async projectDirectory => {
       const cacheFolderPath =
